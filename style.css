@@ -1,0 +1,159 @@
+*::before,
+*,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #332c39;
+  color: #f0eeed;
+  display: grid;
+  grid-template-areas:
+    "e d"
+    "e d";
+  min-height: 100vh;
+  font-family: "Karla", sans-serif;
+}
+
+section {
+  padding: 1.75em;
+  display: grid;
+  place-items: center;
+}
+
+#encrypt {
+  grid-area: e;
+}
+
+section div {
+  display: grid;
+  place-items: center;
+}
+
+section input {
+  all: unset;
+  outline: 1px solid transparent;
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  border-radius: 8px 0 0 8px;
+  font-size: 1.5em;
+  padding: 0.1em 0.4em 0.3em;
+  padding-right: 0;
+  transition: border-color 0.15s ease, background 0.2s linear;
+  caret-color: transparent;
+}
+
+section input::placeholder {
+  color: hsla(0, 0%, 100%, 0.9);
+  opacity: 0.9;
+  font-size: 0.55em;
+  user-select: none;
+  pointer-events: none;
+  transition: 0.15s linear;
+}
+
+section input:focus {
+  border-color: hsla(0, 0%, 100%, 0.4);
+  background: hsla(0, 0%, 50%, 0.2);
+}
+
+section input:focus + button {
+  border-color: hsla(0, 0%, 100%, 0.4);
+  background: hsla(0, 0%, 50%, 0.2);
+}
+
+section form button:is(:active, :hover) {
+  background: hsla(0, 0%, 100%, 0.3);
+  border-color: hsla(0, 0%, 100%, 0.6);
+}
+
+section input:focus::placeholder {
+  opacity: 0.4;
+}
+
+div form {
+  display: flex;
+  align-items: center;
+}
+
+form button {
+  all: unset;
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  border-left: none;
+  height: 100%;
+  padding: 0.34em 0.5em;
+  display: grid;
+  place-items: center;
+  font-size: 1.4em;
+  border-radius: 0 8px 8px 0;
+  transition: all 0.15s ease;
+}
+
+form button:is(:hover, :active) {
+  background: none;
+}
+
+button:is(:hover, :active) i {
+  opacity: 0.9;
+}
+
+button i {
+  opacity: 0.5;
+  transition: all 0.18s ease-in-out;
+  height: 1em;
+  line-height: 1em;
+}
+
+div p {
+  text-align: center;
+  margin: 0.5em 0.25em;
+  font-size: 1.5em;
+}
+
+#decrypt {
+  background: #609ea2;
+  grid-area: d;
+}
+
+#decrypt form input {
+  border-color: hsla(0, 0%, 0%, 0.3);
+  color: hsla(0, 0%, 100%, 0.9);
+}
+
+#decrypt form input::placeholder {
+  color: hsla(0, 0%, 0%, 0.9);
+}
+
+#decrypt form input:focus {
+  background: hsla(0, 0%, 0%, 0.3);
+  border-color: hsla(0, 0%, 0%, 0.6);
+}
+
+#decrypt form input:focus + button {
+  background: hsla(0, 0%, 0%, 0.3);
+  border-color: hsla(0, 0%, 0%, 0.6);
+}
+
+#decrypt form button:is(:hover, :active) {
+  background: hsla(0, 0%, 0%, 0.3);
+  border-color: hsla(0, 0%, 0%, 0.6);
+}
+
+#decrypt form button {
+  border-color: hsla(0, 0%, 0%, 0.3);
+  color: hsla(0, 0%, 100%, 0.9);
+  padding-block: 0.35em;
+}
+
+#decrypt form button i {
+  color: hsla(0, 0%, 0%, 0.9);
+}
+
+@media (max-width: 640px) {
+  body {
+    grid-template-areas:
+      "e e"
+      "d d";
+  }
+}

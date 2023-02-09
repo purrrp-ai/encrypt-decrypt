@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>3-shifts encryption/decryption</title>
+  </head>
+  <body>
+    <section id="encrypt">
+      <div>
+        <form id="encrypting">
+          <input
+            type="text"
+            pattern="[a-jA-J]{1,18}"
+            minlength="1"
+            maxlength="18"
+            id="text-normal"
+            placeholder="enter normal message i.e. characters a - j"
+          />
+          <button type="submit" id="encrypt">
+            <i class="fi fi-rr-lock"></i>
+          </button>
+        </form>
+        <p class="changed norm-enc"></p>
+      </div>
+    </section>
+    <section id="decrypt">
+      <div>
+        <form id="decrypting">
+          <input
+            type="text"
+            pattern="[0-9]{1,18}"
+            minlength="1"
+            maxlength="18"
+            id="encrypted-text"
+            placeholder="enter encrypted message"
+          />
+          <button type="submit" id="decrypt">
+            <i class="fi fi-rr-unlock"></i>
+          </button>
+        </form>
+        <p class="changed enc-norm"></p>
+      </div>
+    </section>
+  </body>
+</html>
