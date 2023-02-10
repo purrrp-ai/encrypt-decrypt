@@ -29,6 +29,7 @@ decryptForm.addEventListener("submit", (evt) => {
 
   for (const num of numbers) {
     let index = (num - 3) % alphabets.length;
+    if (index <= 0) index += alphabets.length;
     decipheredMessage += alphabets[index - 1];
   }
 
