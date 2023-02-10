@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,7 +10,7 @@
       href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Karla&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
@@ -23,13 +22,13 @@
         <form id="encrypting">
           <input
             type="text"
-            pattern="[a-jA-J]{1,18}"
+            pattern="[a-zA-Z]{1,18}"
             minlength="1"
             maxlength="18"
             id="text-normal"
-            placeholder="enter normal message i.e. characters a - j"
+            placeholder="normal message [a-z]"
           />
-          <button type="submit" id="encrypt">
+          <button type="submit" id="encrypt-btn" title="encrypt text">
             <i class="fi fi-rr-lock"></i>
           </button>
         </form>
@@ -41,13 +40,13 @@
         <form id="decrypting">
           <input
             type="text"
-            pattern="[0-9]{1,18}"
+            pattern="^(?:[0-9]|1[0-9]|2[0-6])(?:\|(?:[0-9]|1[0-9]|2[0-6]))*$"
             minlength="1"
             maxlength="18"
             id="encrypted-text"
-            placeholder="enter encrypted message"
+            placeholder="encrypted message [11|12]"
           />
-          <button type="submit" id="decrypt">
+          <button type="submit" id="decrypt-btn" title="decrypt text">
             <i class="fi fi-rr-unlock"></i>
           </button>
         </form>

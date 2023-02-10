@@ -14,7 +14,7 @@ body {
     "e d"
     "e d";
   min-height: 100vh;
-  font-family: "Karla", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 section {
@@ -30,6 +30,7 @@ section {
 section div {
   display: grid;
   place-items: center;
+  gap: 1em;
 }
 
 section input {
@@ -38,7 +39,7 @@ section input {
   border: 1px solid hsla(0, 0%, 100%, 0.2);
   border-radius: 8px 0 0 8px;
   font-size: 1.5em;
-  padding: 0.1em 0.4em 0.3em;
+  padding: 0.3em 0.4em;
   padding-right: 0;
   transition: border-color 0.15s ease, background 0.2s linear;
   caret-color: transparent;
@@ -47,9 +48,7 @@ section input {
 section input::placeholder {
   color: hsla(0, 0%, 100%, 0.9);
   opacity: 0.9;
-  font-size: 0.55em;
-  user-select: none;
-  pointer-events: none;
+  font-size: 0.9em;
   transition: 0.15s linear;
 }
 
@@ -82,7 +81,7 @@ form button {
   border: 1px solid hsla(0, 0%, 100%, 0.2);
   border-left: none;
   height: 100%;
-  padding: 0.34em 0.5em;
+  padding: 0.5em;
   display: grid;
   place-items: center;
   font-size: 1.4em;
@@ -143,7 +142,7 @@ div p {
 #decrypt form button {
   border-color: hsla(0, 0%, 0%, 0.3);
   color: hsla(0, 0%, 100%, 0.9);
-  padding-block: 0.35em;
+  /* padding-block: 0.5em; */
 }
 
 #decrypt form button i {
